@@ -1,4 +1,0 @@
-For this you need to have:
-
-sf_matrix (matrix_bounds)
-Smitting
