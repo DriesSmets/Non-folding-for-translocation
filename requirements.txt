@@ -1,0 +1,7 @@
+numpy
+matplotlib
+peakutils
+scipy
+symfit
+ipykernel
+ipywidgets
