@@ -3,6 +3,7 @@ from pyhdx.fileIO import read_dynamx
 from pyhdx.models import PeptideMasterTable, HDXMeasurement
 from pyhdx.plot import *
 import proplot as pplt
+
 import matplotlib.pyplot as plt
 
 cwd = Path(__file__).parent
