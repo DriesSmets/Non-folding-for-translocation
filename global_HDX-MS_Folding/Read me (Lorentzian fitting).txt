@@ -1,0 +1,4 @@
+For this you need to have:
+
+symfit (matrix_bounds branch: https://github.com/tBuLi/symfit/tree/matrix_bounds)
+Smitting
