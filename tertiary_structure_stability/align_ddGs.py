@@ -152,31 +152,18 @@ thd
 projected = np.nanmean(np.clip(ddG_arr, -thd, thd), axis=1)
 
 projected_df = pd.DataFrame(
-    {'r_number': aligned_df[(('ppia', 'r_number'))],
-     'sequence': aligned_df[(('ppia', 'sequence'))],
+    {'r_number': aligned_df[(('ppib', 'r_number'))],
+     'sequence': aligned_df[(('ppib', 'sequence'))],
      'projected_dddG': projected
      }
 )
 
+projected_df.loc[110:120]
 
-
-#%%
-projected_df
 #%%
 std = projected_df['projected_dddG'].std()
-std
-
-#%%
 dropped = projected_df.dropna()
-dropped
-
-
-#%%
-dropped['projected_dddG'].abs() > 2*std
-#%%
-
 outliers = dropped[dropped['projected_dddG'].abs() > 2*std]
-outliers
 
 #%%
 pplt.rc.update({'tick.labelsize': 12})  # with rc context ...
@@ -214,20 +201,16 @@ for prot in ['ppia', 'ppib']:
     outliers = dropped[dropped['projected_dddG'].abs() > 2*std]
     pplt.rc.update({'tick.labelsize': 12})  # with rc context ...
 
-    fig, ax = pplt.subplots(aspect=3, width=160/25.4)
-    ax.plot(dropped['r_number'].to_numpy().astype(int), dropped['projected_dddG'].to_numpy())
-    ax.scatter(outliers['r_number'].to_numpy().astype(int), outliers['projected_dddG'], color='r')
+    fig, ax = pplt.subplots(aspect=4, width=160/25.4)
+    ax.plot(projected_df['r_number'].astype(float).to_numpy(), projected_df['projected_dddG'].to_numpy())
     ax.axhline(std, color='k', alpha=0.5, linestyle='--')
     ax.axhline(2*std, color='k', alpha=0.5, linestyle='--')
     ax.axhline(-std, color='k', alpha=0.5, linestyle='--')
     ax.axhline(-2*std, color='k', alpha=0.5, linestyle='--')
 
-    for i in outliers.index:
-        x = outliers.loc[i]['r_number']
-        y = outliers.loc[i]['projected_dddG']
-        s = outliers.loc[i]['sequence']
-        ax.annotate(f'{x}{s}', (x, y))
-    ax.format(xlabel='Residue Number')
+    cap_label = 'PpiA' if 'a' in prot else 'PpiB'
+    ax.format(xlabel=f'{cap_label} residue number', ylabel='Mean ΔΔΔG',
+              title='PpiA - PpiB ΔΔG mutational energy differences')
     plt.savefig(f'{prot}_projected.png')
     plt.show()
 
@@ -242,7 +225,5 @@ for prot in ['ppia', 'ppib']:
     pymol_str = series_to_pymol(colors)
 
     Path(f'{prot}_colors.pml').write_text(pymol_str)
-
-
 
 
