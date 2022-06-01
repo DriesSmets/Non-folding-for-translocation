@@ -1,0 +1,9 @@
+pyHDX version None
+# 2022/01/07 12:59:36 (1641556776)
+
+--------------------------
+Regualizer 1: 0.1  Regualizer 2: 0.05
+Total_loss 4991.08, mse_loss 4394.48, reg_loss 596.60(11.95%)
+Number of epochs: 53574
+Time elapsed: 77.70 s
+--------------------------
