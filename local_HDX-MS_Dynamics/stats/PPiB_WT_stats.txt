@@ -1,0 +1,13 @@
+HDX Measurement: PPiB_WT
+
+Number of peptides:     69
+Number of residues:     171 (2 - 173)
+Number of timepoints:   7
+Timepoints:             0.00, 10.02, 30.00, 60.00, 300.00, 600.00, 1800.00 seconds
+Coverage Percentage:    100.00
+Average redundancy:     8.50      
+Average peptide length: 21.07
+Temperature:            303.15 K
+pH:                     7.59             
+Repeatability 0.06 Da 
+Back exchange: 37.1 % (IQR: 8.3) 

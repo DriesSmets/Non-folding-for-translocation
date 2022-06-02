@@ -1,0 +1,41 @@
+# updated batch format
+
+PPiA_WT:
+  filenames: ['PpiA_WT_March2020.csv']
+  control:
+    state: PpiA-FD
+    exposure:
+      value: 0.167
+      unit: min
+  state: 'PpiANative_30Ckinetix'
+  pH: 7.59
+  d_percentage: 90
+  temperature:
+    value: 30.
+    unit: C
+  sequence: 'MFKSTLAAMAAVFALSALSPAAMAAKGDPHVLLTTSAGNIELELDKQKAPVSVQNFVDYVNSGFYNNTTFHRVIPGFMIQGGGFTEQMQQKKPNPPIKNEADNGLRNTRGTIAMARTADKDSATSQFFINVADNAFLDHGQRDFGYAVFGKVVKGMDVADKISQVPTHDVGPYQNVPSKPVVILSAKVLP'
+  label: 'PPiA WT'
+  FD_method: '8M Urea; 4C; 95.5% D; pH:7.59 (pH read from pH meter, uncorrected)'
+  RCSB ID: 1V9T
+  author: Lily
+
+PPiB_WT:
+  filenames: ['PpiB_WT_native30CMarch2020.csv']
+  control:
+    state: ppiB_FD
+    exposure:
+      value: 0.167
+      unit: min
+  state: 'ppiB_Native_30C_kinetics'
+  pH: 7.59
+  d_percentage: 90.
+  temperature:
+    value: 30.
+    unit: C
+  temperature_unit: Celsius
+  sequence: 'MVTFHTNHGDIVIKTFDDKAPETVKNFLDYCREGFYNNTIFHRVINGFMIQGGGFEPGMKQKATKEPIKNEANNGLKNTRGTLAMARTQAPHSATAQFFINVVDNDFLNFSGESLQGWGYCVFAEVVDGMDVVDKIKGVATGRSGMHQDVPKEDVIIESVTVSELEHHHHHH'
+  n_term: 1
+  label: 'PPiB WT'
+  FD_method: '8M Urea; 4C; 95.5% D; pH:7.59 (pH read from pH meter, uncorrected)'
+  RCSB ID: '1LOP'
+  author: Lily
