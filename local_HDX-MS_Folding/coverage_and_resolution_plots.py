@@ -18,7 +18,7 @@ sp_length_B = 30
 
 files = list((cwd / 'DynamX csv files').iterdir())
 for f in files:
-    data = read_dynamx(cwd / 'data' / f)
+    data = read_dynamx(f)
 
     if f.stem.startswith('pro'):
         FD_state = 'Folding'
@@ -74,7 +74,6 @@ for f in files:
 
     fig.colorbar(red, label='Redundancy (peptides)', **kwargs)
     fig.colorbar(res, label='Local Resolution (residues)', **kwargs)
-
 
     axes[2].format(xlabel='Residue Number')
 
