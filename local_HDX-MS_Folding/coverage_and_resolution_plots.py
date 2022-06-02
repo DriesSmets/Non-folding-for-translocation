@@ -8,21 +8,6 @@ import matplotlib.pyplot as plt
 
 cwd = Path(__file__).parent
 
-# data = read_dynamx(cwd / 'data' / 'ppiAWT_4Cfolding_February2021.csv')
-# FD_state = 'Native folded'
-# s_data = data.query(f'state == "{FD_state}"')
-# control_FD = (FD_state, s_data['exposure'].unique()[-1])
-#
-# ND_state = 'FD'
-# s_data = data.query(f'state == "{ND_state}"')
-# control_ND = (ND_state, s_data['exposure'].unique()[-1])
-#
-#
-# pmt = PeptideMasterTable(data, d_percentage=90.)
-# pmt.set_control(control_FD, control_ND)
-# state_data = pmt.get_state('folding_4C_10secLabelling')
-# state_data = state_data.query('exposure != 0')
-#hdxm = HDXMeasurement(state_data)
 
 ND_state = 'FD'
 exp_state = 'Folding'
@@ -31,7 +16,7 @@ exp_state = 'Folding'
 sp_length_A = 24
 sp_length_B = 30
 
-files = list((cwd / 'data').iterdir())
+files = list((cwd / 'DynamX csv files').iterdir())
 for f in files:
     data = read_dynamx(cwd / 'data' / f)
 
