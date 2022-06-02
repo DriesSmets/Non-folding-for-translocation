@@ -1,0 +1,13 @@
+HDX Measurement: PPiA_WT
+
+Number of peptides:     76
+Number of residues:     162 (25 - 187)
+Number of timepoints:   8
+Timepoints:             0.00, 10.02, 30.00, 60.00, 300.00, 600.00, 1800.00, 6000.00 seconds
+Coverage Percentage:    85.79
+Average redundancy:     9.25      
+Average peptide length: 19.72
+Temperature:            303.15 K
+pH:                     7.59             
+Repeatability 0.079 Da 
+Back exchange: 29.1 % (IQR: 13.0) 

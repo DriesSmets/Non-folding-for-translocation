@@ -1,0 +1,13 @@
+HDX Measurement: Folding
+
+Number of peptides:     56
+Number of residues:     185 (2 - 187)
+Number of timepoints:   17
+Timepoints:             0.06, 4.98, 9.96, 19.98, 30.00, 39.96, 60.00, 150.00, 300.00, 600.00, 900.00, 1200.00, 1800.00, 2700.00, 3600.00, 9000.00, 86400.01 seconds
+Coverage Percentage:    100.00
+Average redundancy:     4.36      
+Average peptide length: 14.39
+Temperature:            None K
+pH:                     None             
+Repeatability 0.15 Da 
+Back exchange: 31.3 % (IQR: 10.4) 
