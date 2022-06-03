@@ -18,7 +18,6 @@ output_dir.mkdir(exist_ok=True, parents=True)
 
 FD_state = 'FD'
 ND_state = 'Folding'
-exp_state = 'Folding'
 
 
 sp_length_A = 24
@@ -28,7 +27,7 @@ files = list((cwd / 'DynamX csv files').iterdir())
 
 #%%
 
-def process_rfu(name, data, control_FD, control_ND, suffix):
+def process_rfu(name, data, control_FD, control_ND, suffix, exp_state):
     pmt = PeptideMasterTable(data, d_percentage=95.)
     pmt.set_control(control_FD, control_ND)
     state_data = pmt.get_state(exp_state)
@@ -83,4 +82,6 @@ for f in files:
     s_data = data_.query(f'state == "{ND_state}"')
     control_ND_ = (ND_state, s_data['exposure'].unique()[0])
 
-    process_rfu(name_, data_, control_FD_, control_ND_, 'timepoint')
+    process_rfu(name_, data_, control_FD_, control_ND_, 'folding_flexibility', 'Folding')
+    if name_.startswith("Ppi"):
+        process_rfu(name_, data_, control_FD_, control_ND_, 'native_flexibility', 'Native')
